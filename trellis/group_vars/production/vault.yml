@@ -1,0 +1,22 @@
+# Documentation: https://roots.io/trellis/docs/vault/
+vault_mysql_root_password: productionpw
+
+# Documentation: https://roots.io/trellis/docs/security/
+vault_users:
+  - name: "{{ admin_user }}"
+    password: example_password
+    salt: "generateme"
+
+# Variables to accompany `group_vars/production/wordpress_sites.yml`
+# Note: the site name (`example.com`) must match up with the site name in the above file.
+vault_wordpress_sites:
+  http://printvint.unaux.com:
+    env:
+auth_key: "Y/nJd{;m(2>wKX|}mf97!]<Q_51RqBt[I&Sm5)C3)^fEr95R@P7E{lH4F+nMwVoJ"
+secure_auth_key: "JEkyynyM-(up+e_N[3yrla5Y^nWFt%IRq,QsJbdJL/RI&>>TM]R?TBwJ;zvkR<MJ"
+logged_in_key: ":{/LAHvja#WD_R_7)pRl+6zaG(}#K:N_g0rdO%;Fqybi$M=aH3fCW6q-<6tLb69M"
+nonce_key: "AfbO?kYkto/rali]=a*.lB%c2=5,|KK+k]2F9UCrnSMp>dw9H_?!(j*i19>%rPl|"
+auth_salt: "q>5Ldht{3`4@D%`ywmqGt8,r(>ti-R<Wy=@,^,hiH%>r%J){>V80RCd[K=^O]nZ="
+secure_auth_salt: "BPyJV`2dHf;/6#cj!8%Nft`}:suS}%.&Jg_JzSt*^>xciWqdTW|#tm(Po_W<mBi."
+logged_in_salt: "k<^)D?2_N<tb=AM`^K70UuFV4yYyw--XqoKS23xbS!XZ<F4Eb!^Mf[Pik]D++%3s"
+nonce_salt: "+j;f@4cK!l_4v)8N{P3P:sVhuK/W^tMN<m*}<Zahi@hRo{.T5/1D{Ek*d$0Z=wF#"
